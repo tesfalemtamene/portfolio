@@ -82,7 +82,7 @@ export function Footer() {
 
                 <div className="border-t border-gray-200 dark:border-gray-800 pt-8 mt-8 text-center">
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                        &copy; {currentYear} {contactInfo.name}. Built with Next.js and Vercel.
+                        &copy; {currentYear} {contactInfo.name} All rights reserved. Built with Next.js, TypeScript, Tailwind CSS,Framer Motion and Vercelhosting.
                     </p>
                 </div>
             </div>
