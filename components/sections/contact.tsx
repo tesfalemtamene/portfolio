@@ -5,7 +5,6 @@ import { Send, Loader2, CheckCircle2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useContactForm } from "@/hooks/use-contact-form";
 import { fadeIn } from "@/lib/animations";
-
 export function Contact() {
     const { register, handleSubmit, errors, isSubmitting, isSuccess, errorMsg, onSubmit, resetForm } = useContactForm();
 

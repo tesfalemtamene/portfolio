@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Professional Portfolio",
-  description: "Senior Frontend Engineer Portfolio",
+  description: "Software Developer Portfolio",
 };
 
 export default function RootLayout({
@@ -28,9 +28,9 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Your Name",
+    "name": "TESFALEM TAMENE WELDU",
     "url": "https://yourportfolio.com",
-    "jobTitle": "Senior Frontend Engineer",
+    "jobTitle": "Software Developer",
     "sameAs": [
       "https://github.com/yourusername",
       "https://linkedin.com/in/yourusername"

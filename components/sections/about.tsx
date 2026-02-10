@@ -21,8 +21,7 @@ export function About() {
                         <div className="space-y-6">
                             <h3 className="text-2xl font-semibold mb-4">Background</h3>
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                As a Senior Frontend Engineer with over 5 years of experience, I am passionate
-                                about bridging the gap between design and engineering. I thrive in collaborative
+                                As a Software Developer, I am passionate about bridging the gap between design and engineering. I thrive in collaborative
                                 environments and enjoy tackling complex problems with clean, scalable solutions.
                             </p>
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
