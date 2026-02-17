@@ -19,23 +19,22 @@ export const useContactForm = () => {
         setErrorMsg("");
 
         try {
-            const serviceId = "YOUR_SERVICE_ID";
-            const templateId = "YOUR_TEMPLATE_ID";
-            const publicKey = "YOUR_PUBLIC_KEY";
+            const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
+            const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+            const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
-            if (serviceId === "YOUR_SERVICE_ID") {
-                await new Promise(resolve => setTimeout(resolve, 1000)); // Mock delay
-                setIsSuccess(true);
-                reset();
-            } else {
-                await emailjs.send(serviceId, templateId, {
-                    from_name: data.name,
-                    from_email: data.email,
-                    message: data.message,
-                }, publicKey);
-                setIsSuccess(true);
-                reset();
+            if (!serviceId || !templateId || !publicKey) {
+                throw new Error("EmailJS environment variables are missing.");
             }
+
+            await emailjs.send(serviceId, templateId, {
+                from_name: data.name,
+                from_email: data.email,
+                message: data.message,
+            }, publicKey);
+
+            setIsSuccess(true);
+            reset();
         } catch (error) {
             console.error(error);
             setErrorMsg("Something went wrong. Please try again later.");
