@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { Analytics } from "@vercel/analytics/react";
+import { socialLinks, contactInfo } from "@/lib/data";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,8 +18,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Professional Portfolio",
-  description: "Software Developer Portfolio",
+  title: "Tesfalem Tamene Weldu - Portfolio",
+  description: "Software Developer and AI Enthusiast building intelligent scalable solutions.",
+  openGraph: {
+    title: "Tesfalem Tamene Weldu - Portfolio",
+    description: "Software Developer and AI Enthusiast building intelligent scalable solutions.",
+    url: "https://tesfalem.com", // Update with your actual domain
+    siteName: "Tesfalem Tamene Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -25,16 +35,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Extract URLs for JSON-LD schema
+  const socialUrls = socialLinks.map(link => link.href).filter(href => !href.startsWith('mailto:'));
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "TESFALEM TAMENE WELDU",
-    "url": "https://yourportfolio.com",
+    "name": contactInfo.name,
+    "url": "https://tesfalem.com", // Update with your actual domain
     "jobTitle": "Software Developer",
-    "sameAs": [
-      "https://github.com/yourusername",
-      "https://linkedin.com/in/yourusername"
-    ]
+    "sameAs": socialUrls,
   };
 
   return (
@@ -58,6 +68,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

@@ -34,3 +34,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+Remainder:
+- To run and build the project, use `npm run dev` and `npm run build` respectively.
+- To deploy the project, use `npm run deploy`.
+- To lint the project, use `npm run lint`.
+- To start the project, use `npm run start`.
+- To test the project, use `npm run test`.
+- To format the project, use `npm run format`.      
+

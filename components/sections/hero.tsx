@@ -1,63 +1,96 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, User } from "lucide-react";
 import { fadeIn } from "@/lib/animations";
 
 export function Hero() {
+    const [imgError, setImgError] = useState(false);
+
     return (
         <section
             id="home"
             className="min-h-[90vh] flex items-center justify-center py-20 relative overflow-hidden"
         >
-            {/* Background gradients */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-blue-500/20 dark:bg-blue-500/10 blur-[100px] rounded-full pointer-events-none" />
+            {/* Grid Background */}
+            <div className="absolute inset-0 -z-30 h-full w-full bg-[#f8fafc] dark:bg-[#0a0a0a]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+            </div>
 
-            <div className="container mx-auto px-6 text-center z-10">
-                <motion.div
-                    variants={fadeIn}
-                    initial="hidden"
-                    animate="visible"
-                >
-                    <span className="px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-sm font-medium text-gray-900 dark:text-gray-100 inline-block mb-6">
-                        Senior Frontend Engineer
-                    </span>
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 dark:from-white dark:via-gray-400 dark:to-gray-600 pb-2">
-                        Building Scalable <br /> Cloud-Native Solutions
-                    </h1>
-                    <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 text-balance">
-                        I help startups and enterprises engineer robust full-stack applications that drive business growth.
-                        Focused on performance, security, and exceptional user experience.
-                    </p>
-                    <div className="flex flex-col items-center gap-6">
+            <div className="container mx-auto px-6 z-10 h-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 h-full min-h-[90vh]">
+
+                    {/* Text Container (Left side) */}
+                    <motion.div
+                        variants={fadeIn}
+                        initial="hidden"
+                        animate="visible"
+                        className="text-center flex flex-col justify-center pt-24 md:pt-0"
+                    >
+                        <div className="mb-4">
+                            <span className="px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-sm font-medium text-blue-700 dark:text-blue-300 inline-block border border-blue-200 dark:border-blue-800">
+                                Software Developer | AI Enthusiast
+                            </span>
+                        </div>
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-200 dark:to-white leading-tight">
+                            Building Intelligent & <br /> Scalable Solutions
+                        </h1>
+                        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-lg mx-auto mb-10 text-balance leading-relaxed">
+                            I engineer robust full-stack applications and secure network infrastructures.
+                            Passionate about integrating AI/ML to drive innovation and business growth.
+                        </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                             <a
                                 href="/resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all hover:scale-105 flex items-center gap-2"
+                                className="px-8 py-3.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg shadow-lg hover:shadow-blue-500/25 transition-all hover:scale-105 flex items-center gap-2"
                             >
-                                <ArrowRight className="h-4 w-4" /> Download Resume
+                                <ArrowRight className="h-5 w-5" /> Download Resume
                             </a>
                             <Link
                                 href="#projects"
-                                className="px-8 py-4 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 text-gray-900 dark:text-white font-medium transition-all hover:bg-gray-50 dark:hover:bg-gray-900"
+                                className="px-8 py-3.5 rounded-full bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 text-gray-900 dark:text-white font-bold text-lg transition-all"
                             >
                                 View Projects
                             </Link>
                         </div>
+                    </motion.div>
 
-                        <a
-                            href="https://github.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sm text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-2"
+                    {/* Image Container (Right side) */}
+                    <div className="relative w-full h-[600px] md:h-[85vh] min-h-[70vh] flex items-center justify-center overflow-hidden">
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="relative w-full h-full max-w-[700px] lg:max-w-[900px]"
+                            style={{
+                                WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%)',
+                                maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%)'
+                            }}
                         >
-                            View GitHub Statistics <ArrowRight className="h-3 w-3" />
-                        </a>
+                            <div className="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full"></div>
+                            {!imgError ? (
+                                <Image
+                                    src="/profile.jpg"
+                                    alt="Profile Picture"
+                                    fill
+                                    className="object-cover object-center md:object-contain md:object-bottom drop-shadow-2xl z-10"
+                                    onError={() => setImgError(true)}
+                                    priority
+                                />
+                            ) : (
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <User className="w-16 h-16 text-gray-400 z-10" />
+                                </div>
+                            )}
+                        </motion.div>
                     </div>
-                </motion.div>
+
+                </div>
             </div>
         </section>
     );

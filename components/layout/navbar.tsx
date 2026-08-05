@@ -32,9 +32,17 @@ export function Navbar() {
             <div className="container mx-auto px-6 flex items-center justify-between">
                 <Link
                     href="#home"
-                    className="text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity"
+                    className="flex items-center gap-2 group hover:opacity-90 transition-opacity"
                 >
-                    TESFALEM TAMENE WELDU
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:shadow-blue-500/25 transition-all">
+                        TF
+                    </div>
+                    <span className="text-xl font-bold tracking-tight hidden sm:block">
+                        Tesfalem Tamene Weldu
+                    </span>
+                    <span className="text-xl font-bold tracking-tight sm:hidden">
+                        Tesfalem
+                    </span>
                 </Link>
 
                 {/* Desktop Navigation */}

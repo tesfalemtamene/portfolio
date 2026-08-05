@@ -12,7 +12,7 @@ export const navLinks: NavLink[] = [
 ];
 
 export const contactInfo: ContactInfo = {
-    name: "TESFALEM TAMENE WELDU",
+    name: "Tesfalem Tamene Weldu",
     email: "tesfalemtamene2023@gmail.com",
     location: "Addis Ababa, Ethiopia",
 };
@@ -23,7 +23,7 @@ export const socialLinks: SocialLink[] = [
     { name: "Facebook", href: "https://web.facebook.com/tesfalem.tamene", icon: "facebook" },
     { name: "Instagram", href: "https://www.instagram.com/tf_tamene", icon: "instagram" },
     { name: "Email", href: "mailto:tesfalemtamene2023@gmail.com", icon: "mail" },
-    { name: "GitHub", href: "https://github.com", icon: "github" },
+    { name: "GitHub", href: "https://github.com/tesfalemtamene", icon: "github" },
 ];
 
 export const skills: Skill[] = [
@@ -61,23 +61,23 @@ export const projects: Project[] = [
 
 export const experience: ExperienceItem[] = [
     {
-        role: "Software Developer",
-        company: "Niyat Consutlancy",
-        period: "2023 - Present",
-        description: "Leading frontend development for core products, improving performance by 40%.",
+        role: "Internship",
+        company: "Adigrat University",
+        period: "Sep 2024 - Jan 2025",
+        description: "Participated in Network Infrastructure and Security configuration, improving performance by 40%.",
     },
     {
         role: "Software Developer",
-        company: "Niyat Consutlancy",
+        company: "Niyat Consultancy",
         period: "Sep 2025 - Present",
-        description: "Built responsive web applications and collaborated with UX/UI teams.",
+        description: "Building Odoo ERP Modules for Wagwago Business group",
     },
 ];
 
 export const education: EducationItem[] = [
     {
         degree: "BSc in Computer Science and Engineering",
-        school: "Mekelle University- Mekelle Institute of Technology,Ethiopia",
+        school: "Mekelle Institute of Technology - Mekelle University,Ethiopia",
         year: "2025",
     },
     {
