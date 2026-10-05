@@ -6,6 +6,7 @@ export interface Skill {
 export interface Project {
     title: string;
     description: string;
+    category?: string;
     tags: string[];
     demoUrl: string;
     repoUrl: string;
@@ -40,4 +41,21 @@ export interface ContactInfo {
     name: string;
     email: string;
     location: string;
+}
+
+export interface AwardItem {
+    title: string;
+    organization: string;
+    date: string;
+    description: string;
+    certificate?: string;
+}
+
+export interface LeadershipItem {
+    organization: string;
+    role: string;
+    location: string;
+    period: string;
+    description: string;
+    certificate?: string;
 }

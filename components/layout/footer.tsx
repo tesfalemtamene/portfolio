@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail, Twitter, MapPin, User, ArrowRight, Facebook, Instagram } from "lucide-react";
-import { navLinks, contactInfo, socialLinks } from "@/lib/data";
+import { Github, Linkedin, Mail, Twitter, MapPin, User, Facebook, Instagram } from "lucide-react";
+import { contactInfo, socialLinks } from "@/lib/data";
 
 export function Footer() {
     const currentYear = new Date().getFullYear();
@@ -18,50 +18,35 @@ export function Footer() {
     };
 
     return (
-        <footer className="border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-black/50 pt-16 pb-8">
-            <div className="container mx-auto px-6">
-                <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <footer id="contact" className="border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-black/50 pt-16 pb-8">
+            <div className="container mx-auto px-6 max-w-6xl">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 mb-12">
+
                     {/* Column 1: Contact Info */}
                     <div className="space-y-4">
-                        <h3 className="text-xl font-bold mb-4">Contact Info</h3>
-                        <div className="flex items-center gap-3 text-gray-600 dark:text-gray-400">
-                            <User className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                            <span>{contactInfo.name}</span>
-                        </div>
-                        <div className="flex items-center gap-3 text-gray-600 dark:text-gray-400">
-                            <Mail className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                            <a href={`mailto:${contactInfo.email}`} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                                {contactInfo.email}
-                            </a>
-                        </div>
-                        <div className="flex items-center gap-3 text-gray-600 dark:text-gray-400">
-                            <MapPin className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                            <span>{contactInfo.location}</span>
+                        <h3 className="text-xl font-bold mb-6">Contact Info</h3>
+                        <div className="flex flex-col gap-3">
+                            <div className="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                                <User className="h-5 w-5 text-blue-600 dark:text-blue-400 shrink-0" />
+                                <span>{contactInfo.name}</span>
+                            </div>
+                            <div className="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                                <Mail className="h-5 w-5 text-blue-600 dark:text-blue-400 shrink-0" />
+                                <a href={`mailto:${contactInfo.email}`} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                    {contactInfo.email}
+                                </a>
+                            </div>
+                            <div className="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                                <MapPin className="h-5 w-5 text-blue-600 dark:text-blue-400 shrink-0" />
+                                <span>{contactInfo.location}</span>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Column 2: Quick Links */}
-                    <div className="md:col-span-1">
-                        <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-                        <ul className="grid grid-cols-2 gap-2">
-                            {navLinks.map((link) => (
-                                <li key={link.name}>
-                                    <Link
-                                        href={link.href}
-                                        className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-2 group"
-                                    >
-                                        <ArrowRight className="h-4 w-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
-                                        {link.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Column 3: Social Links */}
+                    {/* Column 2: Social Links */}
                     <div>
-                        <h3 className="text-xl font-bold mb-4">Connect</h3>
-                        <div className="flex flex-wrap gap-4">
+                        <h3 className="text-xl font-bold mb-6 md:text-right">Connect</h3>
+                        <div className="flex flex-wrap gap-4 md:justify-end">
                             {socialLinks.map((link) => (
                                 <Link
                                     key={link.name}
@@ -78,11 +63,15 @@ export function Footer() {
                             ))}
                         </div>
                     </div>
+
                 </div>
 
-                <div className="border-t border-gray-200 dark:border-gray-800 pt-8 mt-8 text-center">
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                        &copy; {currentYear} {contactInfo.name} All rights reserved.
+                <div className="border-t border-gray-200 dark:border-gray-800 pt-8 mt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center">
+                    <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+                        &copy; {currentYear} {contactInfo.name}. All rights reserved.
+                    </p>
+                    <p className="text-sm text-gray-400 dark:text-gray-600">
+                        Designed & Built for Scale.
                     </p>
                 </div>
             </div>

@@ -19,10 +19,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Tesfalem Tamene Weldu - Portfolio",
-  description: "Software Developer and AI Enthusiast building intelligent scalable solutions.",
+  description: "Software Engineer and AI Enthusiast building intelligent scalable solutions.",
   openGraph: {
     title: "Tesfalem Tamene Weldu - Portfolio",
-    description: "Software Developer and AI Enthusiast building intelligent scalable solutions.",
+    description: "Software Engineer and AI Enthusiast building intelligent scalable solutions.",
     url: "https://tesfalemtamene.vercel.com",
     siteName: "Tesfalem Tamene Weldu",
     locale: "en_US",
@@ -43,7 +43,7 @@ export default function RootLayout({
     "@type": "Person",
     "name": contactInfo.name,
     "url": "https://tesfalem.com", // Update with your actual domain
-    "jobTitle": "Software Developer",
+    "jobTitle": "Software Engineer",
     "sameAs": socialUrls,
   };
 

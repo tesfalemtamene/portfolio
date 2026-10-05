@@ -21,10 +21,10 @@ export const Terminal = ({ className }: { className?: string }) => {
                 <div className="flex gap-2 text-green-400">
                     <span>➜</span>
                     <span>~</span>
-                    <span className="text-white">whoami</span>
+                    <span className="text-white"></span>
                 </div>
                 <div className="text-gray-300">
-                    Software Developer & AI Enthusiast
+                    Software Engineer & AI Enthusiast
                     <br />
                     Passionate about AI/ML, Security, and Scalable Architectures.
                 </div>

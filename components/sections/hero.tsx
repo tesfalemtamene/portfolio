@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, User } from "lucide-react";
+import { Download, User } from "lucide-react";
 import { fadeIn } from "@/lib/animations";
 
 export function Hero() {
@@ -13,7 +12,7 @@ export function Hero() {
     return (
         <section
             id="home"
-            className="min-h-[90vh] flex items-center justify-center py-20 relative overflow-hidden"
+            className="min-h-[85vh] flex items-center justify-center pt-20 pb-10 relative overflow-hidden"
         >
             {/* Grid Background */}
             <div className="absolute inset-0 -z-30 h-full w-full bg-[#f8fafc] dark:bg-[#0a0a0a]">
@@ -28,33 +27,36 @@ export function Hero() {
                         variants={fadeIn}
                         initial="hidden"
                         animate="visible"
-                        className="text-center flex flex-col justify-center pt-24 md:pt-0"
+                        className="text-center md:text-left flex flex-col justify-center pt-10 md:pt-0"
                     >
                         <div className="mb-4">
-                            <span className="px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-sm font-medium text-blue-700 dark:text-blue-300 inline-block border border-blue-200 dark:border-blue-800">
-                                Software Engineer | AI & Intelligent Systems
+                            <span className="text-blue-600 dark:text-blue-400 font-bold tracking-widest uppercase text-sm md:text-base">
+                                Hello, my name is
                             </span>
                         </div>
-                        <h1 className="text-4xl md:text-5xl lg:text-[64px] font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900 dark:from-white dark:via-blue-300 dark:to-white leading-tight">
-                            Tesfalem Tamene Weldu
+                        <h1 className="text-2xl md:text-3xl lg:text-[42px] font-bold tracking-tight mb-2 text-gray-900 dark:text-white leading-tight">
+                            Tesfalem Tamene Weldu.
                         </h1>
-                        <p className="text-lg md:text-[22px] text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10 text-balance leading-relaxed">
-                            I build intelligent, secure, and scalable software systems across AI/ML, NLP, computer vision, and enterprise applications.
+                        <h2 className="text-1xl md:text-3xl lg:text-[32px] font-bold tracking-tight mb-6 text-gray-400 dark:text-gray-500 leading-tight">
+                            I am a Software Engineer.
+                        </h2>
+                        <p className="text-base md:text-[16px] text-gray-600 dark:text-gray-300 max-w-2xl mx-auto md:mx-0 mb-10 text-balance leading-relaxed">
+                            I develop secure, scalable, and practical software solutions, with interests spanning AI/ML, NLP, computer vision, and intelligent information systems.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <Link
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
+                            <a
                                 href="#projects"
                                 className="px-8 py-3.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg shadow-lg hover:shadow-blue-500/25 transition-all hover:scale-105"
                             >
                                 View My Projects
-                            </Link>
+                            </a>
                             <a
                                 href="/resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="px-8 py-3.5 rounded-full bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 text-gray-900 dark:text-white font-bold text-lg transition-all flex items-center gap-2"
                             >
-                                <ArrowRight className="h-5 w-5" /> Download CV
+                                <Download className="h-5 w-5" /> Resume
                             </a>
                             <a
                                 href="https://github.com/tesfalemtamene"

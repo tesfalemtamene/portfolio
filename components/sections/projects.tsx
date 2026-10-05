@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { projects } from "@/lib/data";
 import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { fadeIn } from "@/lib/animations";
 import { GridBackground } from "@/components/ui/backgrounds";
 
@@ -67,8 +66,15 @@ export function Projects() {
                                 </div>
 
                                 <div className="p-6 flex flex-col flex-grow">
+                                    {project.category && (
+                                        <div className="mb-3">
+                                            <span className="inline-block px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider rounded-md border border-blue-100 dark:border-blue-800/50">
+                                                {project.category}
+                                            </span>
+                                        </div>
+                                    )}
                                     <h3 className="text-[22px] md:text-[26px] leading-snug font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{project.title}</h3>
-                                    <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3 text-sm flex-grow">
+                                    <p className="text-justify text-gray-600 dark:text-gray-400 mb-4 line-clamp-3 text-sm flex-grow">
                                         {project.description}
                                     </p>
                                     <div className="flex flex-wrap gap-2 mt-auto">

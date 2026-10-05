@@ -24,7 +24,7 @@ export function Contact() {
                         Get In Touch
                     </h2>
                     <p className="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto text-lg">
-                        Whether you have a question, want to collaborate, or just want to say hello, feel free to reach out. 
+                        Whether you have a question, want to collaborate, or just want to say hello, feel free to reach out.
                         I look forward to hearing from you!
                     </p>
 
@@ -34,7 +34,7 @@ export function Contact() {
                                 <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
                                 <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
                                 <p className="text-gray-600 dark:text-gray-400">
-                                    Thanks for reaching out. I'll get back to you soon.
+                                    Thanks for reaching out. I&apos;ll get back to you soon.
                                 </p>
                                 <button
                                     onClick={resetForm}

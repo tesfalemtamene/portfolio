@@ -5,6 +5,7 @@ import { experience } from "@/lib/data";
 import { Briefcase } from "lucide-react";
 import { fadeIn } from "@/lib/animations";
 import { BeamBackground } from "@/components/ui/backgrounds";
+import Image from "next/image";
 
 export function Experience() {
     return (
@@ -39,7 +40,7 @@ export function Experience() {
                                         {job.period}
                                     </span>
                                 </div>
-                                <p className="text-gray-600 dark:text-gray-300 leading-relaxed pl-2">
+                                <p className="text-justify text-gray-600 dark:text-gray-300 leading-relaxed pl-2">
                                     {job.description}
                                 </p>
                             </div>
@@ -48,20 +49,35 @@ export function Experience() {
 
                     <div className="mt-20 pt-10 border-t border-gray-200 dark:border-gray-800">
                         <h3 className="text-2xl font-bold mb-8 text-center text-gray-400 dark:text-gray-600 uppercase tracking-widest text-sm">Trusted By</h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                            {/* Trusted By Logos/Names */}
-                            <div className="h-16 flex items-center justify-center bg-white dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-blue-500/50 transition-colors">
-                                <span className="text-sm font-bold text-gray-500 dark:text-gray-400 text-center px-2">Adigrat University</span>
-                            </div>
-                            <div className="h-16 flex items-center justify-center bg-white dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-blue-500/50 transition-colors">
-                                <span className="text-sm font-bold text-gray-500 dark:text-gray-400 text-center px-2">Mekelle University</span>
-                            </div>
-                            <div className="h-16 flex items-center justify-center bg-white dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-blue-500/50 transition-colors">
-                                <span className="text-sm font-bold text-gray-500 dark:text-gray-400 text-center px-2">Niyat Consultancy</span>
-                            </div>
-                            <div className="h-16 flex items-center justify-center bg-white dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-blue-500/50 transition-colors">
-                                <span className="text-sm font-bold text-gray-500 dark:text-gray-400 text-center px-2">Cisco Academy</span>
-                            </div>
+                        <div className="flex flex-wrap justify-center gap-6 md:gap-8 opacity-60 hover:opacity-100 transition-opacity duration-500">
+
+
+                            <a
+                                href="https://niyatconsultancy.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group h-16 w-48 px-4 flex items-center justify-center bg-white rounded-xl border border-gray-200 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 transition-all overflow-hidden relative"
+                            >
+                                <Image src="/niyat-logo.jpg" alt="Niyat Consultancy" fill className="object-contain p-3 mb-1 opacity-80 group-hover:opacity-100 transition-opacity" />
+                            </a>
+                            <a
+                                href="https://www.mu.edu.et/index.php/undergraduate-programs/mekelle-institute-of-technology-undergraduate-programs"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group h-16 w-48 px-4 flex items-center justify-center bg-white rounded-xl border border-gray-200 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 transition-all overflow-hidden relative"
+                            >
+                                <Image src="/mit-logo.png" alt="Mekelle Institute of Technology" fill className="object-contain p-3 mb-1 opacity-80 group-hover:opacity-100 transition-opacity" />
+                            </a>
+
+                            <a
+                                href="https://www.mu.edu.et/index.php"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group h-16 w-48 px-4 flex items-center justify-center bg-white rounded-xl border border-gray-200 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 transition-all overflow-hidden relative"
+                            >
+                                <Image src="/mu-logo.png" alt="Mekelle University" fill className="object-contain p-3 mb-1 opacity-80 group-hover:opacity-100 transition-opacity" />
+                            </a>
+
                         </div>
                     </div>
                 </motion.div>
