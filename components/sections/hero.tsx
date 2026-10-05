@@ -32,31 +32,38 @@ export function Hero() {
                     >
                         <div className="mb-4">
                             <span className="px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-sm font-medium text-blue-700 dark:text-blue-300 inline-block border border-blue-200 dark:border-blue-800">
-                                Software Developer | AI Enthusiast
+                                Software Engineer | AI & Intelligent Systems
                             </span>
                         </div>
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-200 dark:to-white leading-tight">
-                            Building Intelligent & <br /> Scalable Solutions
+                        <h1 className="text-4xl md:text-5xl lg:text-[64px] font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900 dark:from-white dark:via-blue-300 dark:to-white leading-tight">
+                            Tesfalem Tamene Weldu
                         </h1>
-                        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-lg mx-auto mb-10 text-balance leading-relaxed">
-                            I engineer robust full-stack applications and secure network infrastructures.
-                            Passionate about integrating AI/ML to drive innovation and business growth.
+                        <p className="text-lg md:text-[22px] text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10 text-balance leading-relaxed">
+                            I build intelligent, secure, and scalable software systems across AI/ML, NLP, computer vision, and enterprise applications.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <Link
+                                href="#projects"
+                                className="px-8 py-3.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg shadow-lg hover:shadow-blue-500/25 transition-all hover:scale-105"
+                            >
+                                View My Projects
+                            </Link>
                             <a
                                 href="/resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-8 py-3.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg shadow-lg hover:shadow-blue-500/25 transition-all hover:scale-105 flex items-center gap-2"
+                                className="px-8 py-3.5 rounded-full bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 text-gray-900 dark:text-white font-bold text-lg transition-all flex items-center gap-2"
                             >
-                                <ArrowRight className="h-5 w-5" /> Download Resume
+                                <ArrowRight className="h-5 w-5" /> Download CV
                             </a>
-                            <Link
-                                href="#projects"
-                                className="px-8 py-3.5 rounded-full bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 text-gray-900 dark:text-white font-bold text-lg transition-all"
+                            <a
+                                href="https://github.com/tesfalemtamene"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-8 py-3.5 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 text-gray-900 dark:text-white font-bold text-lg transition-all"
                             >
-                                View Projects
-                            </Link>
+                                GitHub
+                            </a>
                         </div>
                     </motion.div>
 

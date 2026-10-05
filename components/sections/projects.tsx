@@ -35,16 +35,26 @@ export function Projects() {
                                 <div className="relative h-48 w-full bg-gray-200 dark:bg-gray-800 overflow-hidden group-hover:opacity-100">
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                                    {/* Placeholder for project image */}
-                                    <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-100 dark:bg-gray-800 group-hover:scale-110 transition-transform duration-700">
-                                        <div className="text-center">
-                                            <div className="w-12 h-12 mx-auto mb-2 text-gray-300 dark:text-gray-600">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-full h-full">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                                                </svg>
+                                    {project.image ? (
+                                        <div className="relative w-full h-full group-hover:scale-105 transition-transform duration-700">
+                                            <Image
+                                                src={project.image}
+                                                alt={project.title}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
+                                    ) : (
+                                        <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-100 dark:bg-gray-800 group-hover:scale-110 transition-transform duration-700">
+                                            <div className="text-center">
+                                                <div className="w-12 h-12 mx-auto mb-2 text-gray-300 dark:text-gray-600">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-full h-full">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    )}
 
                                     <div className="absolute bottom-4 left-4 right-4 z-20 flex justify-end gap-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 delay-100">
                                         <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="p-2 bg-white/90 dark:bg-black/90 rounded-full hover:bg-blue-600 hover:text-white transition-colors shadow-lg" title="View Code">
@@ -57,7 +67,7 @@ export function Projects() {
                                 </div>
 
                                 <div className="p-6 flex flex-col flex-grow">
-                                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{project.title}</h3>
+                                    <h3 className="text-[22px] md:text-[26px] leading-snug font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{project.title}</h3>
                                     <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3 text-sm flex-grow">
                                         {project.description}
                                     </p>

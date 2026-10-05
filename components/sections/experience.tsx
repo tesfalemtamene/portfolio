@@ -32,8 +32,8 @@ export function Experience() {
 
                                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 bg-white/50 dark:bg-gray-900/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-all backdrop-blur-sm">
                                     <div>
-                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white">{job.role}</h3>
-                                        <p className="text-lg font-medium text-blue-600 dark:text-blue-400">{job.company}</p>
+                                        <h3 className="text-[22px] md:text-[26px] font-bold text-gray-900 dark:text-white mb-1">{job.role}</h3>
+                                        <p className="text-lg md:text-xl font-medium text-blue-600 dark:text-blue-400">{job.company}</p>
                                     </div>
                                     <span className="text-sm font-bold text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-4 py-1.5 rounded-full w-fit mt-2 sm:mt-0 border border-gray-200 dark:border-gray-700">
                                         {job.period}

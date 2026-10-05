@@ -24,8 +24,8 @@ export function Contact() {
                         Get In Touch
                     </h2>
                     <p className="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto text-lg">
-                        I'm currently available for freelance projects and full-time opportunities.
-                        If you have a project that needs some creative touch, let's talk.
+                        Whether you have a question, want to collaborate, or just want to say hello, feel free to reach out. 
+                        I look forward to hearing from you!
                     </p>
 
                     <div className="grid md:grid-cols-2 gap-12 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-2xl">

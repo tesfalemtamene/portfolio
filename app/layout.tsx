@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tesfalem Tamene Weldu - Portfolio",
     description: "Software Developer and AI Enthusiast building intelligent scalable solutions.",
-    url: "https://tesfalem.com", // Update with your actual domain
-    siteName: "Tesfalem Tamene Portfolio",
+    url: "https://tesfalemtamene.vercel.com",
+    siteName: "Tesfalem Tamene Weldu",
     locale: "en_US",
     type: "website",
   },

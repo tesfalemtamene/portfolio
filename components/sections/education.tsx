@@ -24,9 +24,9 @@ export function Education() {
                                     <GraduationCap className="h-6 w-6 text-blue-600" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-bold">{edu.degree}</h3>
-                                    <p className="text-gray-600 dark:text-gray-400">{edu.school}</p>
-                                    <p className="text-sm text-gray-500 mt-1">{edu.year}</p>
+                                    <h3 className="text-xl md:text-[22px] font-bold text-gray-900 dark:text-white mb-1">{edu.degree}</h3>
+                                    <p className="text-base md:text-lg text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
+                                    <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mt-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 w-fit px-3 py-1 rounded-full">{edu.year}</p>
                                 </div>
                             </div>
                         ))}

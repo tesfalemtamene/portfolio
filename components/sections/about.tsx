@@ -24,18 +24,35 @@ export function About() {
 
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8">
-                            <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
-                                Bridging Design & <span className="text-blue-600 dark:text-blue-400">Engineering</span>
+                            <h3 className="text-[32px] md:text-[40px] leading-tight font-bold text-gray-900 dark:text-white">
+                                Engineering Seamless & <span className="text-blue-600 dark:text-blue-400">Intelligent Systems</span>
                             </h3>
                             <div className="space-y-4 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                 <p>
-                                    I am a Software Developer with a strong foundation in <span className="font-semibold text-blue-600 dark:text-blue-400">Computer Science and Engineering</span>.
-                                    My expertise spans full-stack development and <span className="font-semibold text-blue-600 dark:text-blue-400">Network Engineering</span> (CCNA Certified), allowing me to build secure and scalable systems.
+                                    I am a Software Engineer with a rigorous foundation in <span className="font-semibold text-blue-600 dark:text-blue-400">Computer Science and Engineering</span>.
+                                    My expertise bridges full-stack engineering and <span className="font-semibold text-blue-600 dark:text-blue-400">Network Security</span> (CCNA Certified), enabling me to build robust, secure, and secure systems.
                                 </p>
                                 <p>
-                                    Beyond traditional coding, I am an <span className="font-semibold text-blue-600 dark:text-blue-400">AI & Machine Learning</span> enthusiast, constantly exploring how to leverage intelligent algorithms to solve real-world problems.
+                                    I specialize in <span className="font-semibold text-blue-600 dark:text-blue-400">AI & Machine Learning</span>, actively constructing intelligent solutions—from RAG-based systems to customized predictive algorithms that have massive real-world impact.
                                 </p>
                             </div>
+
+                            {/* At a Glance */}
+                            <div className="grid grid-cols-2 gap-4 my-8">
+                                <div className="p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm">
+                                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">3.94<span className="text-lg text-gray-400">/4.00</span></div>
+                                    <div className="text-sm font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wider">Cum. GPA</div>
+                                </div>
+                                <div className="p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm">
+                                    <div className="text-xl font-bold text-gray-900 dark:text-white mb-1">BSc Computer Science & Engineering</div>
+                                    <div className="text-sm font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wider">Degree</div>
+                                </div>
+                                <div className="col-span-2 p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm">
+                                    <div className="text-xl font-bold text-gray-900 dark:text-white mb-1">AI & Intelligent Systems</div>
+                                    <div className="text-sm font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wider">Primary Focus</div>
+                                </div>
+                            </div>
+
 
                             <div className="space-y-6">
                                 {skills.map((skillGroup, index) => (
